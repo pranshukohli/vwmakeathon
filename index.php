@@ -23,8 +23,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      die( print_r( sqlsrv_errors(), true));
 }
 $result = sqlsrv_query($conn, "select * from table1 where 1");
-	echo '2';
+	echo '2j';
 	while( $obj = sqlsrv_fetch_object( $result )) {
+		echo $obj;
 		echo 's';
               echo $obj->col1.'<br>';
 		echo $obj->col2.'<br>';
