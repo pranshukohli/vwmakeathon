@@ -15,7 +15,7 @@ TESTING AZURE
 $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Database" => "store", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:vwserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-$result = mysqli_query("select * from store where 1",$conn);
+$result = mysqli_query($conn, "select * from store where 1");
 
 while ($row = mysqli_fetch_array($result)){
 	echo '1';
