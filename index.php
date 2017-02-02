@@ -22,10 +22,10 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br />";
      die( print_r( sqlsrv_errors(), true));
 }
-$result = mysql_query("select * from table1 where 1");
+$result = sqlsrv_query($conn, "select * from table1 where 1");
 	echo '2';
 	
-while ($row = mysql_fetch_array($result)){
+while ($row = sqlsrv_fetch($result)){
 	echo '1';
 	echo $row['col1'];
   echo $row['col2'];
