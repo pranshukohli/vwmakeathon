@@ -9,7 +9,15 @@ TESTING AZURE
 <body>
 <h1>qasdfghjkl</h1>
 <br><br>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
+<div ng-app="">
+ 
+<p>Input something in the input box:</p>
+<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+<h1>Hello {{name}}</h1>
+
+</div>
 
 <?php
 	echo 'start';
