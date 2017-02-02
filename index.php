@@ -22,7 +22,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br />";
      die( print_r( sqlsrv_errors(), true));
 }
-	$result = sqlsrv_query($conn, "select * from table1");
+	$result = sqlsrv_query($conn, "select * from table1 where 1");
 	echo '2j';
 	while( $obj = sqlsrv_fetch_object( $result )) {
 		echo $obj;
