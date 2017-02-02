@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
 <title>
@@ -10,13 +8,10 @@ TESTING AZURE
 <body>
 <h1>qasdfghjkl</h1>
 <br><br>
-<h1>TESTNG TESTING 123</h1>
-</body>
-  
-  
-</html>
+
 
 <?php
+	echo 'start';
 $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Database" => "store", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:vwserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
@@ -28,3 +23,8 @@ while ($row = mysqli_fetch_array($result)){
   echo $row['col2'];
 }
 ?>
+	<h1>TESTNG TESTING 123</h1>
+</body>
+  
+  
+</html>
