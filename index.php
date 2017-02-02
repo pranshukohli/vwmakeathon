@@ -25,9 +25,11 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 $result = sqlsrv_query($conn, "select * from table1 where 1");
 	echo '2';
 	while( $obj = sqlsrv_fetch_object( $result )) {
-              echo $obj->col1.'<br />';
-		echo $obj->col2.'<br />';
+		echo 's';
+              echo $obj->col1.'<br>';
+		echo $obj->col2.'<br>';
         }
+	echo '3';
 ?>
 	<h1>TESTNG TESTING 123</h1>
 </body>
