@@ -17,17 +17,18 @@ $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Dat
 $serverName = "tcp:vwserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 	if( $conn ) {
-     echo "Connection established.<br />";
+     echo "Connection established.<br>";
 }else{
-     echo "Connection could not be established.<br />";
+     echo "Connection could not be established.<br>";
      die( print_r( sqlsrv_errors(), true));
 }
-	$result = sqlsrv_query($conn, "select * from table1 where 1");
+	$result = sqlsrv_query($conn, "select * from table1");
 	echo '2j';
-	while( $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) ) {
-    echo $row['col1'].", ".$row['col2']."<br />";
+	while( $row = sqlsrv_fetch_array($result) ) {
+    echo $row['col1'].", ".$row['col2']."<br>";
 }
 	echo '3';
+	sqlsrv_close( $conn);
 ?>
 	<h1>TESTNG TESTING 123</h1>
 </body>
