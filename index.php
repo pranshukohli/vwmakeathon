@@ -1,4 +1,5 @@
 
+
 <html>
 <head>
 <title>
@@ -22,6 +23,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 $result = mysqli_query("select * from store where 1",$conn);
 
 while ($row = mysqli_fetch_array($result)){
+	echo '1';
 	echo $row['col1'];
   echo $row['col2'];
 }
