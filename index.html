@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>
@@ -10,4 +11,18 @@ TESTING AZURE
 <br><br>
 <h1>TESTNG TESTING 123</h1>
 </body>
+  
+  
 </html>
+
+<?php
+$connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Database" => "store", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:vwserver.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+$result = mysqli_query("select * from store where 1",$conn);
+
+while ($row = mysqli_fetch_array($result)){
+	echo $row['col1'];
+  echo $row['col2'];
+}
+?>
