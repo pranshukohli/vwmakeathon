@@ -24,12 +24,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
 	$result = sqlsrv_query($conn, "select * from table1 where 1");
 	echo '2j';
-	while( $obj = sqlsrv_fetch_object( $result )) {
-		echo $obj;
-		echo 's';
-              echo $obj->col1.'<br>';
-		echo $obj->col2.'<br>';
-        }
+	while( $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC) ) {
+    echo $row['col1'].", ".$row['col2']."<br />";
+}
 	echo '3';
 ?>
 	<h1>TESTNG TESTING 123</h1>
