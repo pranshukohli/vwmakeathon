@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <title>
@@ -16,6 +17,8 @@ $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Dat
 $serverName = "tcp:vwserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 $result = mysqli_query($conn, "select * from table1 where 1");
+	echo '2';
+	
 echo $conn;
 while ($row = mysqli_fetch_array($result)){
 	echo '1';
