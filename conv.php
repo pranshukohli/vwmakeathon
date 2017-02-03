@@ -47,7 +47,6 @@
         p = Math.round((p / max_gauge_value) * 100);
         displayData(p);
       }
-	    window.location.href = "virtualworld.azurewebsites.net/createdata.php?q1='1'&q2='" + p + "'";
 
     });
   }
