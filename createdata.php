@@ -32,7 +32,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 	echo '2j';
 	}
-	echo '3';
+	echo '3gg';
 	sqlsrv_close( $conn);
 }
 ?>
