@@ -6,7 +6,7 @@
 	</HEAD>
 	<BODY>
 <?php
-		echo '6:39';
+		echo '6:47';
 
 		$address = "Brooklyn+NY+USA";
 
