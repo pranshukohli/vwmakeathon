@@ -29,6 +29,7 @@ while ($row_user = mysql_fetch_assoc($result)){
 }
 
 	//i=i-1;
+	echo $val;
 	echo $userinfo[$val]['col2'];
 	sqlsrv_close( $conn);
 ?>
