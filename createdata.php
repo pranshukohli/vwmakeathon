@@ -15,7 +15,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection established.<br>";
 }else{
      echo "Connection could not be established.<br>";
-     die( print_r( sqlsrv_errors(), true));
+	}
 
 	$sql = "INSERT INTO table1 (col1, col2) VALUES (?, ?)";
 	$params = array($_GET["q1"], $_GET["q2"]);
@@ -31,7 +31,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
 	echo '2j';
-	}
+	
 	echo '3ghhg';
 	sqlsrv_close( $conn);
 }
