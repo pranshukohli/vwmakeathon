@@ -19,7 +19,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br>";
      die( print_r( sqlsrv_errors(), true));
 }
-	$result = sqlsrv_query($conn, "SELECT * FROM table1;");
+	$result = sqlsrv_query($conn, "SELECT * FROM Table ORDER BY ID DESC LIMIT 1;");
 	//$rowa = array();
 	
 while($row = sqlsrv_fetch_array($result)){
