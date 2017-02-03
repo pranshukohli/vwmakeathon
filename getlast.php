@@ -28,7 +28,7 @@ while ($row_user = mysql_fetch_assoc($result)){
 }
 
 	//i=i-1;
-	//echo $userinfo[];
+	echo $userinfo;
 	sqlsrv_close( $conn);
 ?>
 	</body>
