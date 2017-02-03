@@ -22,13 +22,14 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	$result = sqlsrv_query($conn, "SELECT * FROM table1");
 	//$rowa = array();
 	$userinfo = array();
-
+$val = 0;
 while ($row_user = mysql_fetch_assoc($result)){
     $userinfo[] = $row_user;
+	$val=$val+1;
 }
 
 	//i=i-1;
-	echo $userinfo;
+	echo $userinfo[$val]['col2'];
 	sqlsrv_close( $conn);
 ?>
 	</body>
