@@ -3,23 +3,85 @@
 		<TITLE>
 			JSONTOARRAY
 		</TITLE>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+<script type='text/javascript'>
+
+  // set your channel id here
+  var channel_id = 222498;
+  // set your channel's read api key here if necessary
+  var api_key = 'JEJ6JPJUJ389UERW';
+  // maximum value for the gauge
+  var max_gauge_value = 1023;
+  // name of the gauge
+  var gauge_name = 'water level';
+
+  // global variables
+  var chart, charts, data;
+
+  // load the google gauge visualization
+  google.load('visualization', '1', {packages:['gauge']});
+  google.setOnLoadCallback(initChart);
+
+  // display the data
+  function displayData(point) {
+    data.setValue(0, 0, gauge_name);
+    data.setValue(0, 1, point);
+    chart.draw(data, options);
+  }
+
+  // load the data
+  function loadData() {
+    // variable for the data point
+    var p;
+
+    // get the data from thingspeak
+    $.getJSON('https://api.thingspeak.com/channels/' + channel_id + '/feed/last.json?api_key=' + api_key, function(data) {
+
+      // get the data point
+      p = data.field1;
+
+      // if there is a data point display it
+      if (p) {
+        p = Math.round((p / max_gauge_value) * 100);
+        displayData(p);
+      }
+
+    });
+  }
+
+  // initialize the chart
+  function initChart() {
+
+    data = new google.visualization.DataTable();
+    data.addColumn('string', 'Label');
+    data.addColumn('number', 'Value');
+    data.addRows(1);
+
+    chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
+    options = {width: 120, height: 120, redFrom: 90, redTo: 100, yellowFrom:75, yellowTo: 90, minorTicks: 5};
+
+    loadData();
+
+    // load new data every 15 seconds
+    setInterval('loadData()', 15000);
+  }
+
+</script>
+		
+		<style type="text/css">
+  body { background-color: #ddd; }
+  #container { height: 100%; width: 100%; display: table; }
+  #inner { vertical-align: middle; display: table-cell; }
+  #gauge_div { width: 120px; margin: 0 auto; }
+</style>
 	</HEAD>
+	
 	<BODY>
-<?php
-		echo '7:12';
-
-		$address = "Brooklyn+NY+USA";
-
-//set map api url
-$url = "https://thingspeak.com/channels/222498/feed.json";
-
-//call api
-		$json = file_get_contents($url);
-
-//$json = '{"channel":{"id":222498,"name":"adddata","latitude":"0.0","longitude":"0.0","field1":"col1","field2":"col2","created_at":"2017-02-03T15:35:21+05:30","updated_at":"2017-02-03T18:56:12+05:30","last_entry_id":58},"feeds":[{"created_at":"2017-02-03T15:36:10+05:30","entry_id":1,"field1":"0"},{"created_at":"2017-02-03T15:43:04+05:30","entry_id":2,"field1":"0"},{"created_at":"2017-02-03T15:43:21+05:30","entry_id":3,"field1":"0"}]}';
-		$json = json_decode($json, True);
-$lat = $json['channel']['id'];
-echo "Latitude: " . $lat;
-  ?>
+<div id="container">
+      <div id="inner">
+        <div id="gauge_div"></div>
+      </div>
+    </div>
 	</BODY>
 </HTML>
