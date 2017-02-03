@@ -6,6 +6,7 @@
 	</HEAD>
 	<BODY>
 <?php
+		echo 'ahsg';
 $str = file_get_contents('https://thingspeak.com/channels/222498/field/1.json');
 	$json = json_decode($str, true);
 $data = json_decode($jasonval, TRUE);
