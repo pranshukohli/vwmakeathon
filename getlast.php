@@ -27,7 +27,7 @@ while($row = sqlsrv_fetch_array($result)){
 	i++;
 }
 	i=i-1;
-	 echo $rowa[i];
+	 //echo $rowa[i];
 	sqlsrv_close( $conn);
 ?>
 	</body>
