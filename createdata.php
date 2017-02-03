@@ -19,7 +19,6 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 
 
-	$result = sqlsrv_query($conn, "insert into table1 values($_GET['q1'],$_GET['q2']");
 	echo '2j';
 	}
 	echo '3';
