@@ -17,6 +17,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br>";
      die( print_r( sqlsrv_errors(), true));
 
+	$result = sqlsrv_query($conn, "insert into table1 values($_GET['q1'],'$_GET['q2']'");
 
 
 	echo '2j';
