@@ -15,7 +15,7 @@ TESTING AZURE
  
 <p>Input something in the input box:</p>
 <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-<h1>Hello {{name}}</h1>
+<h2>Hello {{name}}</h2>
 
 </div>
 
