@@ -26,8 +26,8 @@ $json = json_decode($json);
 $lat = $json->field1;
 echo "Latitude: " . $lat;
 
-	$sql = "INSERT INTO table1 (col1, col2) VALUES (?, ?)";
-	$params = array('1', $lat);
+	$sql = "INSERT INTO table1 (col2) VALUES (?)";
+	$params = array($lat);
 
 	$stmt = sqlsrv_query( $conn, $sql, $params);
 	if( $stmt === false ) {
