@@ -11,12 +11,12 @@
 		$address = "Brooklyn+NY+USA";
 
 //set map api url
-$url = "https://thingspeak.com/channels/222498/field/1.json";
+$url = "http://maps.google.com/maps/api/geocode/json?address=$address";
 
 //call api
-$json = '{"channel":{"id":"ok"}}';
+$json = file_get_contents($url);
 		$json = json_decode($json);
-$lat = $json->channel[0]->id;
+$lat = $json->results[0]->geometry->location->lat;
 echo "Latitude: " . $lat;
   ?>
 	</BODY>
