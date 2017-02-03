@@ -8,12 +8,17 @@
 <?php
 		echo 'dfghjkl212312ahsg\ndsdfsdfsd';
 
-		$data = file_get_contents("https://thingspeak.com/channels/222498/field/1.json");
-    echo $data;
-echo "asdhajs";
-    echo ('<pre> print the json ');
-    print_r ($json);
-    echo ('</pre>');
+		$address = "Brooklyn+NY+USA";
+
+//set map api url
+$url = "http://maps.google.com/maps/api/geocode/json?address=$address";
+
+//call api
+$json = file_get_contents($url);
+$json = json_decode($json);
+$lat = $json->results[0]->geometry->location->lat;
+$lng = $json->results[0]->geometry->location->lng;
+echo "Latitude: " . $lat . ", Longitude: " . $lng;
   ?>
 	</BODY>
 </HTML>
