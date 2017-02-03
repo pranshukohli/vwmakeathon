@@ -24,7 +24,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	$i=0;
 while($row = sqlsrv_fetch_array($result)){
    //array_push($rowa, $row);
-	i++;
+	i=i+1;
 	echo $row['col2'];
 }
 	//i=i-1;
