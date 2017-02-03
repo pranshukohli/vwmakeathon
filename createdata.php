@@ -17,7 +17,17 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br>";
      die( print_r( sqlsrv_errors(), true));
 
-	$result = sqlsrv_query($conn, "insert into table1 values($_GET['q1'],'$_GET['q2']'");
+	$sql = "INSERT INTO table1 (col1, col2) VALUES (?, ?)";
+	$params = array($_GET["q1"], $_GET["q2"]);
+
+	$stmt = sqlsrv_query( $conn, $sql, $params);
+	if( $stmt === false ) {
+		 die( print_r( sqlsrv_errors(), true));
+	}
+	else
+	{
+		echo "Record add successfully";
+	}
 
 
 	echo '2j';
