@@ -16,7 +16,7 @@ $url = "https://thingspeak.com/channels/222498/field/1.json";
 //call api
 $json = file_get_contents($url);
 $json = json_decode($json);
-$lat = $json->feeds[0]->field1;
+$lat = $json->channel->id;
 
 echo "Latitude: " . $lat;
   ?>
