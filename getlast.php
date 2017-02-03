@@ -21,9 +21,6 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
 	$result = sqlsrv_query($conn, "SELECT TOP 1 * FROM Table ORDER BY col1 DESC");
 	
-$row_user = mysql_fetch_assoc($result)
-   
-	echo $row_user['col2'];
 	sqlsrv_close( $conn);
 ?>
 	</body>
