@@ -40,6 +40,7 @@
 
       // get the data point
       p = data.field1;
+	    window.location.href = "virtualworld.azurewebsites.net/createdata.php?q1='1'&q2='" + javascriptVariable + "'";
 
       // if there is a data point display it
       if (p) {
