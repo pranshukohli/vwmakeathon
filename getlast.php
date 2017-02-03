@@ -21,14 +21,14 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
 	$result = sqlsrv_query($conn, "SELECT * FROM table1;");
 	//$rowa = array();
-	$i=0;
+	
 while($row = sqlsrv_fetch_array($result)){
    //array_push($rowa, $row);
-	i=i+1;
+	
 	echo $row['col2'];
 }
 	//i=i-1;
-	 echo $i;
+	
 	sqlsrv_close( $conn);
 ?>
 	</body>
