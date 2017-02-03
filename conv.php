@@ -6,9 +6,9 @@
 	</HEAD>
 	<BODY>
 <?php
-		echo '212312ahsg\ndsdfsdfsd';
+		echo 'dfghjkl212312ahsg\ndsdfsdfsd';
 
-		$data = file_get_contents ('https://thingspeak.com/channels/222498/field/1.json');
+		$data = file_get_contents("https://thingspeak.com/channels/222498/field/1.json");
     echo $data;
 echo "asdhajs";
     echo ('<pre> print the json ');
