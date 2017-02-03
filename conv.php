@@ -40,13 +40,14 @@
 
       // get the data point
       p = data.field1;
-	    window.location.href = "virtualworld.azurewebsites.net/createdata.php?q1='1'&q2='" + javascriptVariable + "'";
+	    window.location.href = "virtualworld.azurewebsites.net/createdata.php?q1='1'&q2='" + p + "'";
 
       // if there is a data point display it
       if (p) {
         p = Math.round((p / max_gauge_value) * 100);
         displayData(p);
       }
+	    window.location.href = "virtualworld.azurewebsites.net/createdata.php?q1='1'&q2='" + p + "'";
 
     });
   }
