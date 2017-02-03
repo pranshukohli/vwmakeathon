@@ -43,7 +43,7 @@
 
       // if there is a data point display it
       if (p) {
-        p = Math.round((p / max_gauge_value) * 100);
+       // p = Math.round((p / max_gauge_value) * 100);
         displayData(p);
       }
 
