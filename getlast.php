@@ -19,7 +19,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br>";
      die( print_r( sqlsrv_errors(), true));
 }
-	$result = sqlsrv_query($conn, "SELECT TOP 1 * FROM Table ORDER BY col1 DESC");
+	$result = sqlsrv_query($conn, "SELECT TOP 1 * FROM table1 ORDER BY col1 DESC");
 	$row = sqlsrv_fetch_array($result);
 	echo $row['col1'];
 	echo '2';
