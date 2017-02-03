@@ -6,17 +6,17 @@
 	</HEAD>
 	<BODY>
 <?php
-		echo 'dfghjkl212312ahsg\ndsdfsdfsd';
+		echo '6:26';
 
 		$address = "Brooklyn+NY+USA";
 
 //set map api url
-$url = "https://thingspeak.com/channels/222498/field/1.json";
+$url = "http://maps.google.com/maps/api/geocode/json?address=$address";
 
 //call api
 $json = file_get_contents($url);
 $json = json_decode($json);
-$lat = $json->channel[0]->id;
+$lat = $json->result[0]->address_components[0]->long_name;
 
 echo "Latitude: " . $lat;
   ?>
