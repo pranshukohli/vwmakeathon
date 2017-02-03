@@ -21,14 +21,14 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
 	$result = sqlsrv_query($conn, "SELECT * FROM Table ORDER BY ID DESC LIMIT 1;");
 	//$rowa = array();
-	
-while($row = sqlsrv_fetch_array($result)){
-   //array_push($rowa, $row);
-	
-	echo $row['col2'];
+	$userinfo = array();
+
+while ($row_user = mysql_fetch_assoc($result)){
+    $userinfo[] = $row_user;
 }
+
 	//i=i-1;
-	
+	echo $userinfo[];
 	sqlsrv_close( $conn);
 ?>
 	</body>
