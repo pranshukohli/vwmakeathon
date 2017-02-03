@@ -19,18 +19,11 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      echo "Connection could not be established.<br>";
      die( print_r( sqlsrv_errors(), true));
 }
-	$result = sqlsrv_query($conn, "SELECT * FROM table1");
-	//$rowa = array();
-	$userinfo = array();
-$val = 0;
-while ($row_user = mysql_fetch_assoc($result)){
-    $userinfo[] = $row_user;
-	$val=$val+1;
-}
-
-	//i=i-1;
-	echo $val;
-	echo $userinfo[$val]['col2'];
+	$result = sqlsrv_query($conn, "SELECT TOP 1 * FROM Table ORDER BY col1 DESC");
+	
+$row_user = mysql_fetch_assoc($result)
+   
+	echo $row_user['col2'];
 	sqlsrv_close( $conn);
 ?>
 	</body>
