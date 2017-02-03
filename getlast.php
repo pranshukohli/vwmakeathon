@@ -1,3 +1,13 @@
+<HTML>
+	<HEAD>
+	<TITLE>
+		QWERTYUJKKK
+		</TITLE>
+	</HEAD>
+	
+
+
+<body>
 <?php
 	echo 'start';
 $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Database" => "store", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
@@ -17,3 +27,5 @@ $row = sqlsrv_fetch_array($result)
 	echo '3';
 	sqlsrv_close( $conn);
 ?>
+	</body>
+	</HTML>
