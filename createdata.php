@@ -6,7 +6,7 @@
 		</HEAD>
 	<body>
 		<?php
-if( $_GET["q1"] || $_GET["q2"] ) {
+
 	echo 'startk';
 $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Database" => "store", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:vwserver.database.windows.net,1433";
@@ -18,8 +18,16 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	}
 	
 
+$url = "https://api.thingspeak.com/channels/222498/feed/last.json?api_key=JEJ6JPJUJ389UERW";
+
+//call api
+$json = file_get_contents($url);
+$json = json_decode($json);
+$lat = $json->field1;
+echo "Latitude: " . $lat;
+
 	$sql = "INSERT INTO table1 (col1, col2) VALUES (?, ?)";
-	$params = array($_GET["q1"], $_GET["q2"]);
+	$params = array('1', $lat);
 
 	$stmt = sqlsrv_query( $conn, $sql, $params);
 	if( $stmt === false ) {
@@ -35,7 +43,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	
 	echo '3ghhg';
 	sqlsrv_close( $conn);
-}
+
 ?>
 	</body>
 </HTML>
