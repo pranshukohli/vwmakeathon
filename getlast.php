@@ -20,7 +20,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      die( print_r( sqlsrv_errors(), true));
 }
 	$result = sqlsrv_query($conn, "SELECT TOP 1 * FROM Table ORDER BY col1 DESC");
-	echo sqlsrv_fetch_array($result)['col1'];
+	$row = sqlsrv_fetch_array($result);
+	echo $row['col1'];
+	echo '2';
 	sqlsrv_close( $conn);
 ?>
 	</body>
