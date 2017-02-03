@@ -7,7 +7,7 @@
 	<body>
 		<?php
 if( $_GET["q1"] || $_GET["q2"] ) {
-	echo 'start';
+	echo 'startk';
 $connectionInfo = array("UID" => "vwserver@vwserver", "pwd" => "PKazure28", "Database" => "store", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:vwserver.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
@@ -32,7 +32,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
 	echo '2j';
 	}
-	echo '3gg';
+	echo '3ghhg';
 	sqlsrv_close( $conn);
 }
 ?>
