@@ -20,10 +20,14 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
      die( print_r( sqlsrv_errors(), true));
 }
 	$result = sqlsrv_query($conn, "SELECT * FROM table1;");
+	$rowa=array();
+	$i=1;
 while($row = sqlsrv_fetch_array($result)){
-   
+   $rowa[i]=$row;
+	i++;
 }
-	 echo $row['col1'].", ".$row['col2']."<br>";
+	i=i-1;
+	 echo $rowa[i];
 	sqlsrv_close( $conn);
 ?>
 	</body>
