@@ -16,6 +16,9 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }else{
      echo "Connection could not be established.<br>";
 	}
+	$jsonval = https://thingspeak.com/channels/222498/field/1.json;
+	echo $jsonval;
+$data = json_decode($jasonval, TRUE);
 
 	$sql = "INSERT INTO table1 (col1, col2) VALUES (?, ?)";
 	$params = array($_GET["q1"], $_GET["q2"]);
