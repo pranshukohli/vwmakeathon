@@ -16,7 +16,7 @@ $url = "http://maps.google.com/maps/api/geocode/json?address=$address";
 //call api
 $json = file_get_contents($url);
 $json = json_decode($json);
-$lat = $json->results[0]->geometry->location->lat;
+$lat = $json->status;
 echo "Latitude: " . $lat;
   ?>
 	</BODY>
