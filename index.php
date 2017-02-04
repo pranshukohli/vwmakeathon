@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<h1 style="text-align:center">Makeathone 2K17</h1>
+	<h1 style="text-align:center">Makeathon 2K17</h1>
 <h1 style="text-align:center">Water Level In Wells</h1>
 <br><br>
 	
