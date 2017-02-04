@@ -21,7 +21,13 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 }
 	$result = sqlsrv_query($conn, "SELECT TOP 1 * FROM table1 ORDER BY col1 DESC");
 	$row = sqlsrv_fetch_array($result);
-	echo '<h1>WELL_1_LEVEL: '.$row['col2'].'</h1>';
+	if($row['col2']<10){
+			echo '<h1>WELL_1_LEVEL:0'.$row['col2'].'</h1>';
+
+	}
+	else{
+	echo '<h1>WELL_1_LEVEL:'.$row['col2'].'</h1>';
+	}
 	echo '2';
 	sqlsrv_close( $conn);
 ?>
