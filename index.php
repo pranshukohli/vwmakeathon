@@ -6,24 +6,26 @@
 </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+
 
 </head>
 
 <body>
-<h1>Water Level In Wells</h1>
+<h1 style="align:center">Water Level In Wells</h1>
 <br><br>
 	
 	<div class="row">
-  <div class="col-md-3">	
+		<div class="col-md-3"><span>Well 1</span>	
 	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
-		<div class="col-md-3">	
+		<div class="col-md-3">	<span>Well 2</span>
 	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
-		<div class="col-md-3">	
+		<div class="col-md-3">	<span>Well 3</span>
 	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
-		<div class="col-md-3">	
+		<div class="col-md-3">	<span>Well 4</span>
 	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
   
