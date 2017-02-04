@@ -44,13 +44,16 @@ function refr() {
 </div>
   
 </div>
+	<br>
+	<div>
+		<button type="button" onclick="refr()">Refresh</button>
+	</div>
+	<br>
 	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/222498/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 <br>
 		<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/getlast.php"></iframe>
 <br>
-	<div>
-		<button type="button" onclick="refr()">Refresh</button>
-	</div>
+	
 </body>
   
   
