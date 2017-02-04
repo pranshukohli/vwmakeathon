@@ -15,13 +15,13 @@
 	
 	<div class="row">
   <div class="col-md-3">	
-	  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
+	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
 		<div class="col-md-3">	
-	  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
+	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
 		<div class="col-md-3">	
-	  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
+	  <iframe width=auto height=auto style="border: 1px solid #cccccc;" src="http://virtualworld.azurewebsites.net/conv.php"></iframe>
 </div>
   
 </div>
