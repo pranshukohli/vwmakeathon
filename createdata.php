@@ -22,7 +22,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 	}
 	else
 	{
-		echo $stmt;
+		echo $stmt['value'];
 	}
 
 
